@@ -14,6 +14,11 @@
 	<a href="http://mathiasnitzsche.de/l" target="_blank" title="LinkedIn"><img class="noborder opacity" src="http://icons.iconarchive.com/icons/deleket/social-bookmark/32/Linked-In-icon.png" alt="LinkedIn" /></a>
 	
 	<a href="http://mathiasnitzsche.de/x" target="_blank" title="Xing"><img class="noborder opacity" src="http://www.freeiconsweb.com/Icons-show/vector-social-media-icons/xing.png" alt="Xing" /></a>
+	
+	<a href="http://runkeeper.com/user/madmaxmatze" target="_blank" title="RunKeeper"><img class="noborder opacity" src="https://lh4.googleusercontent.com/-bjkmOCE4_ic/ULIOvrJjTaI/AAAAAAAAITc/JcKxXxu5utA/s32/runkeeper-logo.png" alt="RunKeeper" /></a>
+	
+	<a href="http://blog.mathiasnitzsche.de" target="_blank" title="Tumblr"><img class="noborder opacity" src="https://lh4.googleusercontent.com/-SX_nH6EmQpA/ULIQO2UGPWI/AAAAAAAAITk/pezKfjEmc1Y/s32/tumblr-logo.png" alt="Tumblr" /></a>
+	
 	<script>function showContactInfo() {alert("Pleae send emails to info(at)" + location.host);}</script>
 	<a href="javascript:showContactInfo()" title="Write me a mail"><img class="noborder opacity" src="http://icons.iconarchive.com/icons/iconshots/social-media-network/32/mail-icon.png" alt="" /></a>
 </p>
@@ -29,13 +34,13 @@
 
 <h3>Professional</h3>
 <p>
-	Since 2006 I'm working in the field of professional software development and architecture - for 5 years as an employed <a href="/teamsite" title="Teamsite Consulting">IT-Consultant</a> and now as a freelancer and <a href="http://www.wifis.org" title="Turning WiFi networks into social networks" target="_blank">founder</a>. More details are available via the business network links on the top.
+	Since 2006 I'm working in the field of professional software development - holding positions as <a href="/teamsite" title="Teamsite Consulting">consultant</a>, teamlead, freelancer and <a href="http://www.wifis.org" title="Turning WiFi networks into social networks" target="_blank">founder</a>. More details are available via the business network links on the top.
 </p>
 <p>
-	I work very solution oriented - without being limited to one technology. I'm a very experienced front end <small>(HTML, CSS, JS)</small> and back end <small>(Java, .NET, PHP)</small> developer. This includes corresponding servers <small>(Apache, IIS, GoogleAppsEngine, Tomcat)</small>, frameworks <small>(Spring, jQuery, GWT)</small> and development tools <small>(Eclipse, Maven, Git)</small>.
+	I work very solution oriented - without being limited to one technology. I'm a very experienced front end <small>(HTML, CSS, JS)</small> and back end <small>(Java, .NET, PHP)</small> developer. This includes corresponding servers <small>(Apache, IIS, GoogleAppsEngine, Tomcat)</small>, frameworks <small>(Spring, Zend, jQuery, GWT)</small> and development tools <small>(IDEs, Maven, Git)</small>.
 </p>
 <p>
-	Furthermore I have already done many other interesting things, without considering myself an expert of: Android Applications, C++, Perl, Python, OR-Mapping, mySQL, DB2, NoSQL, node.js, SEO, SEM and Usability optimization.
+	Furthermore I have already done many other interesting things, without considering myself an expert of: Android Applications, C++, Perl, Python, OR-Mapping, mySQL, NoSQL, node.js, SEO, SEM and Usability optimization.
 </p>
 
 

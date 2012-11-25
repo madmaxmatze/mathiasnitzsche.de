@@ -106,7 +106,7 @@ $currentPage = getCurrentPage($pages);
 		<div class="content">
 			<?php 
 				if (isset($currentPage["parent"]))  { 
-					echo '<div class="breadcrumb">&laquo; <a href="' . $currentPage["parent"]["uri"] . '">' .$currentPage["parent"]["title"] . '</a></div>' : '');
+					echo '<div class="breadcrumb">&laquo; <a href="' . $currentPage["parent"]["uri"] . '">' .$currentPage["parent"]["title"] . '</a></div>';
 				}
 				
 				if (isset($currentPage["headline"])) {
@@ -126,6 +126,7 @@ $currentPage = getCurrentPage($pages);
 			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = 'http://www.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
-	</script><?php } ?>
+	</script>
+<?php } ?>
 </body>
 </html><?php finalizeCms() ?>

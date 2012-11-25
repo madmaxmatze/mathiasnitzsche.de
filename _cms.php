@@ -5,9 +5,7 @@
 function getCurrentPage(&$pages) {
 	global $docRoot;
 	$docRoot = str_replace($_SERVER["DOCUMENT_ROOT"], "", str_replace("/_index.php", "", $_SERVER['SCRIPT_FILENAME']));
-	
-	ob_start();
-	
+		
 	// calc docRoot and uri
 	$uri = ($_SERVER['REQUEST_URI'] ? $_SERVER['REQUEST_URI'] : "/");
 
@@ -24,28 +22,28 @@ function getCurrentPage(&$pages) {
 	// special files
 	if (!$currentPage) {
 		if (preg_match("/\/sitemap\.(xml|txt)/", $uri, $treffer)) {
-			header("Content-Type: text/" . ($treffer[1] == "xml" ? "xml" : "plain"));
 			$output = "";
+			$isXml = ($treffer[1] == "xml");
+			header("Content-Type: text/" . ($isXml ? "xml" : "plain"));
 			foreach ($pages as $p) {
 				if (!isset($p["hideInSitemap"]) || !$p["hideInSitemap"]) {
 					$u = "http://mathiasnitzsche.de" . $p["uri"];
-					$output .= ($treffer[1] == "xml" ? "\t<url><loc>" . $u . "</loc></url>" : $u) . "\n";
+					$output .= ($isXml ? "\t<url><loc>" . $u . "</loc></url>" : $u) . "\n";
 				}
 			}
-			if ($treffer[1] == "xml") {
+			if ($isXml) {
 				$output = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" .
 					"<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\">\n" . $output . "</urlset>";
 			}
-			echo $output;
-			die();
+			die($output);
 		} else if ($uri == "/robots.txt") {
-			echo "User-agent: *\nAllow: /";
-			die();
+			die("User-agent: *\nAllow: /");
+		} else {
+			$currentPage = $pages["error404"];
+			header("HTTP/1.0 404 Not Found");
 		}
-		
-		$currentPage = $pages["error404"];
-		header("HTTP/1.0 404 Not Found");
 	}
+	ob_start();
 	return $currentPage;
 };
 
@@ -58,14 +56,16 @@ function includeCurrentPage(&$currentPage) {
 	}
 }
 
-function finalizeCms () {
+function finalizeCms ($compress = false) {
 	global $docRoot;
 	$content = ob_get_contents();
 	ob_end_clean();
 	
-	#remove new lines, spaces, tabs
-	// $content = preg_replace('/[\r\n\t]+/', ' ', $content);
-	// $content = preg_replace('/[\s]+/', ' ', $content);
 	$content = preg_replace('/href\=\"\//', 'href="' . $docRoot . '/', $content);
+	if ($compress) {
+		#remove new lines, spaces, tabs
+		$content = preg_replace('/[\r\n\t]+/', ' ', $content);
+		$content = preg_replace('/[\s]+/', ' ', $content);
+	}
 	echo $content;
 }

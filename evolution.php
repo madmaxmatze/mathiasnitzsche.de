@@ -3,7 +3,7 @@
 </p>
 
 <p>
-	...and nowerdays I have <a href="/projects">other projects</a> and even <a href="/teamsite">work</a> to play around with new stuff. So a very minimal design with no Javascript for the homepage and tumblr for the blog seemed like the perfect choice to not worry about anything, anymore - which is real evolution in the end...
+	...and nowerdays I have <a href="/projects">other projects</a> and even <a href="/teamsite">work</a> to play around with new stuff. So a minimal design with no Javascript, a <a href="https://bitbucket.org/madmaxmatze/mathiasnitzsche.de" target="_blank">50 lines cms</a> for the homepage and tumblr for the blog seemed like the perfect choice to not worry about anything, anymore - which is real evolution in the end...
 </p>
 
 
@@ -139,10 +139,13 @@
 			-->
 		</li>
 		<li style="padding: 0;">'11
-			<img class="link" style="top: 60px; left: -70px" src="http://apps.mathiasnitzsche.de/evolution/tumblr.png" alt="tumblr." />
+			<a href="http://blog.mathiasnitzsche.de" target="_blank"><img class="link" style="top: 60px; left: -70px" src="http://apps.mathiasnitzsche.de/evolution/tumblr.png" alt="tumblr." /></a>
 		</li>
-		<li style="padding: 0;">'12</li>
+		<li style="padding: 0;">'12
+			<a href="https://bitbucket.org/madmaxmatze/mathiasnitzsche.de" target="_blank"><img class="link" style="top: 30px; left: -25px" src="http://apps.mathiasnitzsche.de/evolution/git_small.png" alt="git" /></a>
+		</li>
 	</ul>
+	
 	
 	<div class="screenshot" style="top: 150px;"><a title="20.03.2002: VERSION 1" href="https://lh6.googleusercontent.com/-65TZHN6H57E/Txlnmwm5SOI/AAAAAAAAGCU/U8mWl-uvCXs/s800/mmm2002.jpg" target="_blank"><img src="https://lh6.googleusercontent.com/-65TZHN6H57E/Txlnmwm5SOI/AAAAAAAAGCU/U8mWl-uvCXs/s144/mmm2002.jpg" alt="2002: VERSION 1" /></a></div>
 
@@ -155,8 +158,5 @@
 	<div class="screenshot" style="top: 600px;"><a title="01.08.2006: VERSION 5" href="https://lh3.googleusercontent.com/-VW4a9NHYz6A/TxlnkaGoQxI/AAAAAAAAGCM/V04AtmBsL7w/s800/homepage2006.png" target="_blank"><img src="https://lh3.googleusercontent.com/-VW4a9NHYz6A/TxlnkaGoQxI/AAAAAAAAGCM/V04AtmBsL7w/s144/homepage2006.png" alt="2006: VERSION 5" /></a></div> 
 
 	<div class="screenshot" style="top: 1050px;"><a title="01.01.2012: VERSION 6" href="https://lh4.googleusercontent.com/-We1g3KIAIdk/TyuZtMR4ZAI/AAAAAAAAGKQ/YS60wfWFwrQ/s800/mmm2012.png" target="_blank"><img src="https://lh4.googleusercontent.com/-We1g3KIAIdk/TyuZtMR4ZAI/AAAAAAAAGKQ/YS60wfWFwrQ/s144/mmm2012.png" alt="2012: VERSION 6" /></a></div> 
-
-	
-	
 </div>
 	
