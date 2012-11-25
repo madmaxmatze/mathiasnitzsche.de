@@ -1,14 +1,9 @@
-<?php
-
-/* DONT CHANGE ANYTHING IN THIS FILE !!! */
+<?php /* DONT CHANGE ANYTHING IN THIS FILE !!! */
 
 function getCurrentPage(&$pages) {
 	global $docRoot;
 	$docRoot = str_replace($_SERVER["DOCUMENT_ROOT"], "", str_replace("/_index.php", "", $_SERVER['SCRIPT_FILENAME']));
-		
-	// calc docRoot and uri
-	$uri = ($_SERVER['REQUEST_URI'] ? $_SERVER['REQUEST_URI'] : "/");
-
+	
 	// fix a few cms-array values and find current page
 	$currentPage = null;
 	foreach ($pages as $pageKey => &$page) {
@@ -16,10 +11,9 @@ function getCurrentPage(&$pages) {
 		if (!isset($page["title"])) $page["title"] = $page["headline"];
 		if (isset($page["parent"])) $page["parent"] = &$pages[$page["parent"]];	
 		if (!isset($page["uri"])) $page["uri"] = "/" . $pageKey;
-		if ($docRoot . $page["uri"] == $uri) $currentPage = $page;	
+		if ($docRoot . $page["uri"] == $_SERVER['REQUEST_URI']) $currentPage = $page;	
 	}
 
-	// special files
 	if (!$currentPage) {
 		if (preg_match("/\/sitemap\.(xml|txt)/", $uri, $treffer)) {
 			$output = "";
@@ -36,7 +30,7 @@ function getCurrentPage(&$pages) {
 					"<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\">\n" . $output . "</urlset>";
 			}
 			die($output);
-		} else if ($uri == "/robots.txt") {
+		} else if ($_SERVER['REQUEST_URI'] == "/robots.txt") {
 			die("User-agent: *\nAllow: /");
 		} else {
 			$currentPage = $pages["error404"];
