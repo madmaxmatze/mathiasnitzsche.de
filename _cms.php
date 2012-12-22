@@ -19,9 +19,10 @@ function getCurrentPage(&$pages) {
 			$output = "";
 			$isXml = ($treffer[1] == "xml");
 			header("Content-Type: text/" . ($isXml ? "xml" : "plain"));
+			$domainWithProtocol = "http" . (isset($_SERVER["HTTPS"]) ? "s" : "") . "://" . $_SERVER["HTTP_HOST"];
 			foreach ($pages as $p) {
 				if (!isset($p["hideInSitemap"]) || !$p["hideInSitemap"]) {
-					$u = "http://mathiasnitzsche.de" . $p["uri"];
+					$u = $domainWithProtocol . $p["uri"];
 					$output .= ($isXml ? "\t<url><loc>" . $u . "</loc></url>" : $u) . "\n";
 				}
 			}
@@ -42,12 +43,12 @@ function getCurrentPage(&$pages) {
 };
 
 function includeCurrentPage(&$currentPage) {
-	global $pages;
 	try {
-		if (file_exists("content/" . $currentPage["id"] . '.htm')) {
-			echo file_get_contents("content/" . $currentPage["id"] . '.htm');
+		$contentFilePath = "content/" . $currentPage["id"] . '.htm';
+		if (file_exists($contentFilePath)) {
+			echo file_get_contents($contentFilePath);
 		} else {
-			include "content/" . $currentPage["id"] . '.php';
+			include str_replace("htm", "php", $contentFilePath);
 		}
 	} catch (Exception $e) {
 		echo "Could not load " . $currentPage["id"];
