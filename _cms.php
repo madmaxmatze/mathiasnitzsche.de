@@ -44,7 +44,11 @@ function getCurrentPage(&$pages) {
 function includeCurrentPage(&$currentPage) {
 	global $pages;
 	try {
-		include $currentPage["id"] . '.php';
+		if (file_exists("content/" . $currentPage["id"] . '.htm')) {
+			echo file_get_contents("content/" . $currentPage["id"] . '.htm');
+		} else {
+			include "content/" . $currentPage["id"] . '.php';
+		}
 	} catch (Exception $e) {
 		echo "Could not load " . $currentPage["id"];
 	}
