@@ -4,25 +4,19 @@
 	You should check out my <a href="http://blog.mathiasnitzsche.de" title="private blog">blog</a> and my current main project <a href="http://www.wifis.org" target="_blank" title="The WiFi Community">wifis.org</a>.	
 	<!-- In case you read my <a href="http://blog.mathiasnitzsche.de">blog</a>, please be aware that orthography, especialy the correct one, is not one of my strengths :)-->
 </p>
-<p>	
-	<a href="http://mathiasnitzsche.de/f" target="_blank" title="Facebook"><img class="noborder opacity" src="http://icons.iconarchive.com/icons/deleket/social-bookmark/32/Facebook-icon.png" alt="Facebook" /></a>
-	
-	<a href="http://mathiasnitzsche.de/+" target="_blank" title="Google+"><img class="noborder opacity" src="http://icons.iconarchive.com/icons/spaksu/google-plus/32/Google-Plus-1-icon.png" alt="Google+" /></a>
-	
-	<a href="http://mathiasnitzsche.de/t" target="_blank" title="Twitter"><img class="noborder opacity" src="http://icons.iconarchive.com/icons/fasticon/web-2/32/Twitter-icon.png" alt="Twitter" /></a>
-	
-	<a href="http://mathiasnitzsche.de/l" target="_blank" title="LinkedIn"><img class="noborder opacity" src="http://icons.iconarchive.com/icons/deleket/social-bookmark/32/Linked-In-icon.png" alt="LinkedIn" /></a>
-	
-	<a href="http://mathiasnitzsche.de/x" target="_blank" title="Xing"><img class="noborder opacity" src="http://www.freeiconsweb.com/Icons-show/vector-social-media-icons/xing.png" alt="Xing" /></a>
-	
-	<a href="http://runkeeper.com/user/madmaxmatze" target="_blank" title="RunKeeper"><img class="noborder opacity" src="https://lh4.googleusercontent.com/-bjkmOCE4_ic/ULIOvrJjTaI/AAAAAAAAITc/JcKxXxu5utA/s32/runkeeper-logo.png" alt="RunKeeper" /></a>
-	
-	<a href="http://blog.mathiasnitzsche.de" target="_blank" title="Tumblr"><img class="noborder opacity" src="https://lh4.googleusercontent.com/-SX_nH6EmQpA/ULIQO2UGPWI/AAAAAAAAITk/pezKfjEmc1Y/s32/tumblr-logo.png" alt="Tumblr" /></a>
-	
+<div class="startpageIcons">	
+	<a href="http://mathiasnitzsche.de/l" target="_blank" title="LinkedIn" class="icon32 icon32-linkedin">LinkedIn</a>
+	<a href="http://mathiasnitzsche.de/x" target="_blank" title="Xing" class="icon32 icon32-xing">Xing</a>
+	<a href="http://mathiasnitzsche.de/f" target="_blank" title="Facebook" class="icon32 icon32-facebook">Facebook</a>
+	<a href="http://mathiasnitzsche.de/+" target="_blank" title="Google+" class="icon32 icon32-googleplus">Google Plus</a>
+	<a href="http://mathiasnitzsche.de/t" target="_blank" title="Twitter" class="icon32 icon32-twitter">Twitter</a>
+	<a href="http://blog.mathiasnitzsche.de" target="_blank" title="Tumblr" class="icon32 icon32-tumblr">Tumblr</a>
+	<a href="http://runkeeper.com/user/madmaxmatze" target="_blank" title="RunKeeper" class="icon32 icon32-runkeeper">Runkeeper</a>
 	<script>function showContactInfo() {alert("Pleae send emails to info(at)" + location.host);}</script>
-	<a href="javascript:showContactInfo()" title="Write me a mail"><img class="noborder opacity" src="http://icons.iconarchive.com/icons/iconshots/social-media-network/32/mail-icon.png" alt="" /></a>
-</p>
-<hr style="margin-top: 30px;">
+	<a href="javascript:showContactInfo()" title="Write me a mail" class="icon32 icon32-mail">Mail</a>
+</div>
+
+<hr style="clear: both; margin-top: 30px;">
 
 
 <h3>Personal</h3>

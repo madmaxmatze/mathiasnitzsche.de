@@ -1,5 +1,5 @@
 <h3>About</h3>
-<p>Year 2000: I just turned 17 and <b>Bubbles 2000</b> was one of the games my friend Mirco and I developed at this time with Delphie 5. In Nov 2001 this game was even published in the biggest German Game Magazin called GameStar as the freeware of the month. I can't describe how proud I was! Looking back from today, Bubbles 2000 very much reminds me at all the current smartphone games:  <i>Easy, addictive and a lot fun.</i></p>
+<p>Year 2000: I just turned 17 and <b>Bubbles 2000</b> was one of the games my friend Mirco and I developed at this time with Delphie 5. In Nov 2001 this game was even published in the biggest German Game Magazin called <a href="http://www.gamestar.de" target="_blank" title="GameStar Website">GameStar</a> as the freeware of the month. I can't describe how proud I was! Looking back from today, Bubbles 2000 very much reminds me at all the current smartphone games:  <i>Easy, addictive and a lot fun.</i></p>
 <p>To keep the memory of Bubbles 2000 alive, I put together some screenshots, feedback we received and even a download link. Enjoy!</p>
 
 <h3>Screenshots</h3>
@@ -43,8 +43,8 @@
 
 <h3>Download</h3>
 <ul>
-	<li>Download final game: <a href="https://sites.google.com/site/mathiasnitzsche/files/bubbles2000.zip?attredirects=0&d=1" target="_blank">bubbles2000.zip</a> (0,5MB)</li>
-	<li>Download all prio versions: <a href="https://sites.google.com/site/mathiasnitzsche/files/bubbles2000_dev.zip?attredirects=0&d=1" target="_blank">bubbles2000_dev.zip</a> (3MB)</li>
+	<li>Download final game: <a href="https://googledrive.com/host/0B9kKnAYN_vEENHZWN2ZGSGtJRGs/mathiasnitzsche.de/bubbles2000/bubbles2000.zip" target="_blank">bubbles2000.zip</a> (0,5MB)</li>
+	<li>Download all prio versions: <a href="https://googledrive.com/host/0B9kKnAYN_vEENHZWN2ZGSGtJRGs/mathiasnitzsche.de/bubbles2000/bubbles2000_dev.zip" target="_blank">bubbles2000_dev.zip</a> (3MB)</li>
 </ul>
 <p style="color: gray; font-size : 80%">
 	To run Bubbles 2000 under never Versions then Windows98 without any grafic errors, you have to open the file properties of "bubbles2000.exe" and set the compatibility mode to Windows95.</p>

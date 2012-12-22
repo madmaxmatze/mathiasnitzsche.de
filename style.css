@@ -48,16 +48,15 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 
 /* external fonts*/
-@media screen {
-	@font-face {
-	  font-family: 'Junge';
-	  font-style: normal;
-	  font-weight: 400;
-	  src: local('Junge'), local('Junge-Regular'), url('http://themes.googleusercontent.com/static/fonts/junge/v1/RnsXGP-x9XVrbOSTyRg-sQ.woff') format('woff');
-	}
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Orbitron-Light'), local('Orbitron-Regular'), url(http://themes.googleusercontent.com/static/fonts/orbitron/v3/94ug0rEgQO_WuI_xKJMFc_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
 }
-h1, h2, h3, h4, header ul.mainnavi li a {
-	font-family: 'Junge', serif;
+
+h1, h2, h3, h4, header ul.mainnavi li a{
+	font-family: 'Orbitron', serif;
 }
 
 
@@ -172,14 +171,14 @@ header ul {
 /* main navi */
 header ul.mainnavi li{
 	position: relative;
-	font-size: 18pt;
+	font-size: 14pt;
 	line-height: 22pt;
 	margin-right: 20px;
 	display: inline-block;
 }
 header ul.mainnavi li.active a{
 	font-weight: bold;
-	font-size: 20pt;
+	font-size: 16pt;
 }
 header ul.mainnavi li.active:after {
 	content: "\2227";
@@ -209,3 +208,30 @@ header ul.topnavi a {
 	font-weight: bold;
 	font-family: serif;
 }
+
+
+/* startpage icons */
+.startpageIcons {
+	height: 32px;
+}
+.startpageIcons a {
+	float: left; 
+	text-indent: -10000px;
+	margin-right: 5px;
+	display: block;
+}
+.icon32 {
+	height: 32px;
+	width: 32px;
+	background: url(https://googledrive.com/host/0B9kKnAYN_vEENHZWN2ZGSGtJRGs/mathiasnitzsche.de/icon32.png) no-repeat;
+}
+.icon32-facebook {background-position: 0 -128px;}
+.icon32-googleplus {background-position: 0 -256px;}
+.icon32-twitter {background-position: 0 -512px;}
+.icon32-tumblr {background-position: 0 -448px;}
+.icon32-linkedin {background-position: 0 -288px;}
+.icon32-xing {background-position: 0 -352px;}
+.icon32-runkeeper {background-position: 0 -384px;}
+.icon32-mail {background-position: 0 -96px;}
+
+

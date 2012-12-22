@@ -15,7 +15,7 @@ function getCurrentPage(&$pages) {
 	}
 
 	if (!$currentPage) {
-		if (preg_match("/\/sitemap\.(xml|txt)/", $uri, $treffer)) {
+		if (preg_match("/\/sitemap\.(xml|txt)/",  $_SERVER['REQUEST_URI'], $treffer)) {
 			$output = "";
 			$isXml = ($treffer[1] == "xml");
 			header("Content-Type: text/" . ($isXml ? "xml" : "plain"));
@@ -57,7 +57,6 @@ function finalizeCms ($compress = false) {
 	
 	$content = preg_replace('/href\=\"\//', 'href="' . $docRoot . '/', $content);
 	if ($compress) {
-		#remove new lines, spaces, tabs
 		$content = preg_replace('/[\r\n\t]+/', ' ', $content);
 		$content = preg_replace('/[\s]+/', ' ', $content);
 	}
