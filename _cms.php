@@ -43,6 +43,7 @@ function getCurrentPage(&$pages) {
 };
 
 function includeCurrentPage(&$currentPage) {
+	global $pages;
 	try {
 		$contentFilePath = "content/" . $currentPage["id"] . '.htm';
 		if (file_exists($contentFilePath)) {
@@ -62,7 +63,7 @@ function finalizeCms ($compress = false) {
 	
 	$content = preg_replace('/href\=\"\//', 'href="' . $docRoot . '/', $content);
 	if ($compress) {
-		$content = preg_replace('/[\r\n\t]+/', ' ', $content);
+		$content = preg_replace('/[\r\n\t]+/', '', $content);
 		$content = preg_replace('/[\s]+/', ' ', $content);
 	}
 	echo $content;

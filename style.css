@@ -55,10 +55,9 @@ table { border-collapse: collapse; border-spacing: 0; }
   src: local('Orbitron-Light'), local('Orbitron-Regular'), url(http://themes.googleusercontent.com/static/fonts/orbitron/v3/94ug0rEgQO_WuI_xKJMFc_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
 }
 
-h1, h2, h3, h4, header ul.mainnavi li a{
+h1, h2, h3, h4, header ul.mainnavi li a, header ul.topnavi a {
 	font-family: 'Orbitron', serif;
 }
-
 
 /* own general stuff */
 body {
@@ -177,8 +176,7 @@ header ul.mainnavi li{
 	display: inline-block;
 }
 header ul.mainnavi li.active a{
-	font-weight: bold;
-	font-size: 16pt;
+	color: black;
 }
 header ul.mainnavi li.active:after {
 	content: "\2227";
@@ -187,7 +185,7 @@ header ul.mainnavi li.active:after {
     font-size: 17px;
 	position: absolute;
 	top: 35px;
-	left: 60px;
+	left: 45px;
 	background: white;
 	color: #aaa;
 	width: 9px;
@@ -196,17 +194,15 @@ header ul.mainnavi li.active:after {
 
 /* top navi - hidden */
 header ul.topnavi {
-	display: none;
 	position: absolute;
 	top: 0;
-	text-align: right;
 	right: 0;
+	text-align: right;
 }
 header ul.topnavi a {
 	font-size: 80%;
 	color: #ddd;
 	font-weight: bold;
-	font-family: serif;
 }
 
 
@@ -219,6 +215,19 @@ header ul.topnavi a {
 	text-indent: -10000px;
 	margin-right: 5px;
 	display: block;
+	zoom: 1;
+	filter: alpha(opacity=80);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+.startpageIcons a:hover {
+	filter: alpha(opacity=100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	-moz-opacity:1;
+	-khtml-opacity: 1;
+	opacity: 1;
 }
 .icon32 {
 	height: 32px;

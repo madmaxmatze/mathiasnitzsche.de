@@ -129,4 +129,4 @@ $currentPage = getCurrentPage($pages);
 	</script>
 <?php } ?>
 </body>
-</html><?php finalizeCms() ?>
+</html><?php finalizeCms(true) ?>
