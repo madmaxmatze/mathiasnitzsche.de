@@ -61,11 +61,13 @@ h1, h2, h3, h4, header ul.mainnavi li a, header ul.topnavi a {
 
 /* own general stuff */
 body {
+	padding: 0 10px;
 	color: #222;
 	margin-bottom: 40px;
 	font-size: 11pt;
 	line-height: 18pt;
 	text-align: center;
+	overflow-x: hidden;
 }
 
 a, a:visited {
@@ -81,9 +83,13 @@ a:hover {
 ul {margin-top: 0;}
 
 blockquote {
+	font-style: italic;
 	border-left: 2px solid #DDD;
 	padding-left: 10px;
 	margin-right: 0px;
+}
+h1, h2, h3, h4 {
+	clear: both;
 }
 
 h2, h3 {
@@ -140,7 +146,6 @@ a:hover img {
 /* breadcrumb */
 .breadcrumb {
 	height: 0px;
-	font-size: 80%;
 	position: relative;
 	top: -20px;
 }
@@ -151,15 +156,14 @@ header {
 	padding-bottom: 20px;
 	margin-bottom: 30px;
 	border-bottom: 1px solid #aaa;
-	height: 120px;
+	height: 94px;
 }
 header h1 {
+	font-size: 2em;
 	margin-top: 0;
 	margin-bottom: 15px;
-	padding-top: 30px;
+	padding-top: 20px;
 	font-weight: bold;
-	font-size: 28pt;
-	line-height: 30pt;
 }
 header ul {
 	margin: 0;
@@ -170,7 +174,7 @@ header ul {
 /* main navi */
 header ul.mainnavi li{
 	position: relative;
-	font-size: 14pt;
+	font-size: 1.4em;
 	line-height: 22pt;
 	margin-right: 20px;
 	display: inline-block;
@@ -244,3 +248,53 @@ header ul.topnavi a {
 .icon32-mail {background-position: 0 -96px;}
 
 
+
+
+.project:nth-child(odd) {
+	margin-right: 40px;
+}
+
+.project {
+	display: block;
+	position: relative;
+	width: 280px;
+	overflow: hidden;
+	float: left;
+	margin-bottom: 30px;
+}
+
+.project .headline {
+	position: absolute;
+	background: white;
+	font-weight: bold;
+	padding: 1px 3px;
+	left: 0px;
+	top: 0px;
+}
+
+.project img {
+	display: block;
+	margin: 27px 10px 0 0;
+	float: left;
+}
+
+.project .tags {
+	display:block;
+	color: gray;
+	width: 290px;
+	bottom: 0px;
+	font-size: 90%;
+	line-height: 12pt;
+	margin-top: 3px;
+}
+
+
+
+@media not screen, only screen and (max-device-width: 600px) {
+	.container {
+		width: 100%;
+	}
+	.project {
+		margin-right: 40px;
+	}
+}

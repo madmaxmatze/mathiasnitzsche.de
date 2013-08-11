@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="http://jvectormap.com/js/jquery-1.8.2.min.js"></script>
+  <script src="http://jvectormap.com/js/css3-mediaqueries.js"></script>
+  <script src="http://jvectormap.com/js/modernizr.js"></script>
+  <script src="http://jvectormap.com/js/jquery-jvectormap-1.2.2.min.js"></script>
+ <script src="http://jvectormap.com/js/jquery-jvectormap-world-mill-en.js"></script>
+ <script src="http://jvectormap.com/js/gdp-data.js"></script>
+ 
+ 
+   <link rel="stylesheet" media="all" href="http://jvectormap.com/css/jquery-jvectormap-1.2.2.css"/>
+ 
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+var gdpData = {
+  "DE": 1, "sdfsdfsdf<br>",
+  "AL": 1,
+  "VN": 1,
+  "YE": 1,
+  "ZM": 1,
+  "ZW": 1
+};
+	 $(function(){
+        $('#map').vectorMap({
+          map: 'world_mill_en',
+		  backgroundColor : "white",
+		  regionStyle : {
+			  initial: {
+				fill: 'white',
+				"fill-opacity": 1,
+				stroke: 'none',
+				"stroke-width": 0,
+				"stroke-opacity": 1
+			  },
+			  hover: {
+				"fill-opacity": 0.8
+			  },
+			  selected: {
+				fill: 'yellow'
+			  },
+			  selectedHover: {
+			  }
+			},
+          series: {
+            regions: [{
+              values: gdpData,
+              scale: ['#C8EEFF', '#0071A4'],
+              normalizeFunction: 'polynomial'
+            }]
+          },
+          onRegionLabelShow: function(e, el, code){
+            el.html(el.html()+' (GDP - '+gdpData[code]+')');
+          }
+        });
+      });
+</script>
+</head>
+<body>
+
+<div style="width: 600px; height: 400px; overflow: hidden">
+	<div id="map" style="width: 800px; height: 500px"></div>
+</div>
+</body>
+</html>

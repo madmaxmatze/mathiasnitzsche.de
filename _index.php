@@ -29,31 +29,6 @@ $pages = array(
 		"title" => "Projects",
 		"description" => "A list of private and professional projects I did in the last few years",
 	),
-		"bubbles2000" => array(
-			"headline" => "Bubbles 2000",
-			"parent" => "projects",
-			"description" => "Bubbles 2000 is a Win95 desktop game I developed back in 2000 at the age of 17",
-		),
-		"comdirect" => array(
-			"headline" => "Comdirect Depot Viewer",
-			"parent" => "projects",
-			"description" => "View your Comdirect Depot from any device with a lot of added information",
-		),
-		"diplom" => array(
-			"headline" => "Diplomarbeit",
-			"parent" => "projects",
-			"description" => "In 2006 I wrote my thesis about a migration project in the area of mobile web browsing, which was a very hot topic in these (pre iPhone)-times",
-		),		
-		"evolution" => array(
-			"headline" => "Evolution of this Website",
-			"parent" => "projects",
-			"description" => "Over the last decade this website has seen all the goods and bads of web development",
-		),
-		"pathcarousel" => array(
-			"headline" => "PathCarousel JQuery Plugin",
-			"parent" => "projects",
-			"description" => "PathCarousel is a nice little jQuery Plugin I developed for a customer",
-		),
 		"master" => array(
 			"headline" => "Master of Science - Information Systems (HU Berlin)",
 			"parent" => "projects",
@@ -64,16 +39,46 @@ $pages = array(
 			"parent" => "projects",
 			"description" => "Teamsite Consulting experience and projects I have been involved in",
 		),	
-		"tuning" => array(
-			"headline" => "Paint Image Tuning",
+		"evolution" => array(
+			"headline" => "Evolution of this Website",
 			"parent" => "projects",
-			"description" => "Early on I had to find out that I probably will never be a graphic designer, even if I had some fun with it",
-		),	
+			"description" => "Over the last decade this website has seen all the goods and bads of web development",
+		),
 		"wordpress" => array(
 			"headline" => "Wordpress Pages",
 			"parent" => "projects",
 			"description" => "List of wordpress pages I made for friends fools and family",
 		),	
+		"pathcarousel" => array(
+			"headline" => "PathCarousel JQuery Plugin",
+			"parent" => "projects",
+			"description" => "PathCarousel is a nice little jQuery Plugin I developed for a customer",
+		),
+		"comdirect" => array(
+			"headline" => "Comdirect Depot Viewer",
+			"parent" => "projects",
+			"description" => "View your Comdirect Depot from any device with a lot of added information",
+		),
+		"tuning" => array(
+			"headline" => "Paint Image Tuning",
+			"parent" => "projects",
+			"description" => "Early on I had to find out that I probably will never be a graphic designer, even if I had some fun with it",
+		),	
+		"diplom" => array(
+			"headline" => "Diplomarbeit",
+			"parent" => "projects",
+			"description" => "In 2006 I wrote my thesis about a migration project in the area of mobile web browsing, which was a very hot topic in these (pre iPhone)-times",
+		),		
+		"bubbles2000" => array(
+			"headline" => "Bubbles 2000",
+			"parent" => "projects",
+			"description" => "Bubbles 2000 is a Win95 desktop game I developed back in 2000 at the age of 17",
+		),
+		"coding90s" => array(
+			"headline" => "The projects from my teenage years",
+			"parent" => "projects",
+			"description" => "From the age of 13 to 16 I wrote hell of a lot of code. Good,, Bad, Ugly but always with some learnings.",
+		),
 );
 
 // find current page from the pages

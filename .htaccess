@@ -518,6 +518,8 @@ Options -Indexes
 	RewriteCond %{REQUEST_FILENAME} !favicon\.ico$
 	# RewriteCond %{REQUEST_FILENAME} !^(.+)\.js$
 	RewriteCond %{REQUEST_FILENAME} !^(.+)\.css$
+	RewriteCond %{REQUEST_FILENAME} !^(.+)\.png$
+	RewriteCond %{REQUEST_FILENAME} !^(.+)\.jpg$
 	RewriteCond %{REQUEST_FILENAME} !^(.+)googlec0d52947b1dfc3ef.html$
 	RewriteCond %{REQUEST_FILENAME} !^(.+)BingSiteAuth.xml$
 	RewriteRule ^(.*)$ _index.php
