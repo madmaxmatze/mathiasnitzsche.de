@@ -291,14 +291,8 @@ $projects = array(
 			"tags" => "#Delphi5",
 		),		
 		array(
-			"label" => "Bubbles",
-			"url" => "https://github.com/madmaxmatze/coding90s/tree/master/pascal/2000_bubbles",
-			"img" => "https://raw.github.com/madmaxmatze/coding90s/master/pascal/2000_bubbles/2000_bubbles1.png",
-			"tags" => "#Pascal",
-		),
-		array(
 			"label" => "Bubbles2000",
-			"url" => "https://github.com/madmaxmatze/coding90s/tree/master/delphi/2000_bubbles",
+			"url" => "/bubbles2000",
 			"img" => "https://raw.github.com/madmaxmatze/coding90s/master/delphi/2000_bubbles/screenshots/bubbles3.jpg",
 			"tags" => "#Delphi5",
 		),		
