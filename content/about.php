@@ -11,7 +11,9 @@
 	<a href="http://mathiasnitzsche.de/+" target="_blank" title="Google+" class="icon32 icon32-googleplus">Google Plus</a>
 	<a href="http://mathiasnitzsche.de/t" target="_blank" title="Twitter" class="icon32 icon32-twitter">Twitter</a>
 	<a href="http://blog.mathiasnitzsche.de" target="_blank" title="Tumblr" class="icon32 icon32-tumblr">Tumblr</a>
+	<a href="https://github.com/madmaxmatze" target="_blank" title="GitHub" class="icon32 icon32-github">GitHub</a>
 	<a href="http://runkeeper.com/user/madmaxmatze" target="_blank" title="RunKeeper" class="icon32 icon32-runkeeper">Runkeeper</a>
+	<a href="https://flattr.com/profile/madmaxmatze" target="_blank" title="Flattr" class="icon32 icon32-flattr">Flattr</a>
 	<script>function showContactInfo() {alert("Pleae send emails to info(at)" + location.host);}</script>
 	<a href="javascript:showContactInfo()" title="Write me a mail" class="icon32 icon32-mail">Mail</a>
 </div>
