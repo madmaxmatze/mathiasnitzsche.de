@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Mathias Nitzsche</title>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <style>@charset "UTF-8";
+    /* https://onepagelove.com */
+    @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700i");
+    html { color: #000; }
+    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
+    table { border-collapse: collapse; border-spacing: 0; }
+    fieldset, img { border: 0; }
+    address, caption, cite, code, dfn, em, strong, th, var, optgroup { font-style: inherit; font-weight: inherit; }
+    del, ins { text-decoration: none; }
+    li { list-style: none; }
+    caption, th { text-align: left; }
+    h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+    q:before, q:after { content: ''; }
+    abbr, acronym { border: 0; font-variant: normal; }
+    sup { vertical-align: baseline; }
+    sub { vertical-align: baseline; }
+    legend { color: #000; }
+    input, button, textarea, select, optgroup, option { font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; }
+    input, button, textarea, select { *font-size: 100%; }
+    input[type=text] { border: none; }
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; -moz-font-feature-settings: "liga" on; margin: 0; }
+    img.alignright { float: right; }
+    img.alignleft { float: left; }
+    img.aligncenter { clear: both; display: block; margin-right: auto; margin-left: auto; }
+
+
+    /* custom */
+    body {
+      background-color: #F8F8F8;
+    }
+    .container {
+      width: 640px;
+      max-width: 80%;
+      margin: 120px auto 40px auto;
+      font-family: "Playfair Display", Georgia, Serif;
+      font-size: 36px;
+      line-height: 42px;
+    }
+    @media (max-width: 800px) {
+      .container {
+        margin: 40px auto 20px auto;
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    .name {
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 0.5em;
+    }
+    
+    .intro {
+      margin-bottom: 40px; color: #666;
+      font-family: Courier New;
+      height: 42px;
+    }
+    
+    .projects {
+      font-family: "Helvetica Neue", Arial, Sans-Serif;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 28px;
+      color: #999; 
+    }
+    @media (max-width: 800px) {
+      .container .projects {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    .projects ul {
+      padding: 10px 0 0 0;
+      margin: 0 0 20px 5px;
+    }
+    .projects ul li {
+      list-style-type: none;
+      padding: 0 0 10px 0;
+    }
+    .projects ul li:before {
+      content: "→";
+      padding-right: 20px;
+    }
+    .projects a {
+      color: #999;
+      text-decoration: none;
+      border-bottom: 1px dotted #333;
+    }
+    .projects a:hover {
+      color: #777;
+      border-bottom-color: #222;
+    }
+
+    /*
+      https://fontawesome.com/
+      https://bootstrapthemes.co/collections/free-html-css3-social-media-buttons/
+    */
+    .social {
+      font-size: 1em;
+      color: #555;
+      overflow: hidden;
+    }
+    .social a {
+      vertical-align: top;
+      color: #555;
+    }
+    .social a i {
+      margin: 10px 5px;
+      cursor: pointer;
+      transition: color 300ms ease, margin-top 300ms ease;
+      transform: translateZ(0);
+     }   
+    .social a i:hover {
+      margin-top: 0;
+    }   
+    .social a i#twitter:hover {color: #77DDF6;}
+    .social a i#github:hover {color: black;}
+    .social a i#linkedin:hover {color: #0177B5;}
+    .social a i#mail:hover {color: #F7B401;}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    
+    <div class="name">
+      Hi, I'm Mathias Nitzsche.
+    </div>
+    
+    <div class="intro">
+      <span class='typed'></span>
+    </div>
+   
+    <div class="projects">
+      Current projects:
+      <ul>
+        <li><a href="https://www.peerfol.io" target="_blank">peerfol.io</a></li>
+        <li><a href="https://www.wifis.org" target="_blank">wifis.org</a></li>
+        <li>...more on <a href="https://github.com/madmaxmatze" target="_blank">Github</a></li>
+      </ul>
+    </div>
+
+    <div class="social">
+      <a href="https://twitter.com/madmaxmatze"><i id="twitter" class="fab fa-twitter-square"></i></a>
+
+      <a href="https://github.com/madmaxmatze" target="_blank" title="GitHub"><i id="github" class="fab fa-github-square"></i></a>
+
+      <a href="https://www.linkedin.com/in/mathiasnitzsche/" target="_blank" title="LinkedIn"><i id="linkedin" class="fab fa-linkedin"></i></a>
+      
+      <a href="javascript:alert('Pleae send emails to info(at)' + location.host);" title="Write me a mail"><i id="mail" class="fas fa-envelope-square"></i></a>       
+    </div>
+  </div>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script type="text/javascript">
+  new Typed(".typed" ,{ // https://github.com/mattboldt/typed.js/
+    strings: [
+      "I'm a developer"
+      ,"I'm a manager"
+      ,"I'm a father"
+      ,"I'm a stock investor"
+      ,"Ich bin ein Berliner"
+      ,"I practice Muay-Thai"
+    ]
+    ,typeSpeed: 90
+    ,backDelay: 700
+    ,loop: true 
+  });
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-648146-1']);
+  _gaq.push(['_setDomainName', 'mathiasnitzsche.de']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = 'http://www.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</html>
