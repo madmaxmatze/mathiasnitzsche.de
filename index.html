@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
   <style>@charset "UTF-8";
     /* https://onepagelove.com */
-    @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700i");
     html { color: #000; }
     body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
     table { border-collapse: collapse; border-spacing: 0; }
@@ -39,10 +38,10 @@
       background-color: #F8F8F8;
     }
     .container {
+      font-family: "Helvetica Neue", Arial, Sans-Serif;
       width: 640px;
       max-width: 80%;
       margin: 120px auto 40px auto;
-      font-family: "Playfair Display", Georgia, Serif;
       font-size: 36px;
       line-height: 42px;
     }
@@ -55,6 +54,7 @@
     }
 
     .name {
+      font-family: Garamond, serif;
       margin-bottom: 10px;
       color: #333;
       font-size: 0.5em;
@@ -67,7 +67,6 @@
     }
     
     .projects {
-      font-family: "Helvetica Neue", Arial, Sans-Serif;
       font-weight: 300;
       font-size: 24px;
       line-height: 28px;
@@ -88,7 +87,7 @@
       padding: 0 0 10px 0;
     }
     .projects ul li:before {
-      content: "→";
+      content: "\2192";
       padding-right: 20px;
     }
     .projects a {
@@ -178,7 +177,8 @@
     ,backDelay: 700
     ,loop: true 
   });
-
+</script>
+<script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-648146-1']);
   _gaq.push(['_setDomainName', 'mathiasnitzsche.de']);
