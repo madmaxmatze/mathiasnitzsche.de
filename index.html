@@ -95,18 +95,24 @@
       overflow: hidden;
     }
     .social a {
-      vertical-align: top;
+      vertical-align: bottom;
       color: #555;
+      text-decoration: none;
     }
     .social a i {
       padding: 10px 5px;
       cursor: pointer;
-      transition: color 300ms ease, padding-top 300ms ease;
+      transition: color 300ms ease, padding 300ms ease;
       transform: translateZ(0);
      }   
     .social a i:hover {
-      padding: 0 5px 20px 5px;
-    }   
+      padding: 5px 5px 15px 5px;
+    }
+    .social a i:hover::before {
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 10px -5px;
+      transition: box-shadow 0.3s ease;
+       z-index:10;
+    }     
     .social a i#twitter:hover {color: #77DDF6;}
     .social a i#github:hover {color: black;}
     .social a i#linkedin:hover {color: #0177B5;}
@@ -136,43 +142,45 @@
     </div>
 
     <div class="social">
-      <a href="https://twitter.com/madmaxmatze"><i id="twitter" class="fab fa-twitter-square"></i></a>
-
-      <a href="https://github.com/madmaxmatze" target="_blank" title="GitHub"><i id="github" class="fab fa-github-square"></i></a>
-
-      <a href="https://www.linkedin.com/in/mathiasnitzsche/" target="_blank" title="LinkedIn"><i id="linkedin" class="fab fa-linkedin"></i></a>
-      
-      <a href="javascript:alert('Pleae send emails to info(at)' + location.host);" title="Write me a mail"><i id="mail" class="fas fa-envelope-square"></i></a>       
+      <a href="https://twitter.com/madmaxmatze">
+        <i id="twitter" class="fab fa-twitter-square"></i>
+      </a>
+      <a href="https://github.com/madmaxmatze" target="_blank" title="GitHub">
+        <i id="github" class="fab fa-github-square"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/mathiasnitzsche/" target="_blank" title="LinkedIn">
+        <i id="linkedin" class="fab fa-linkedin"></i>
+      </a>
+      <a href="javascript:alert('Pleae send emails to info(at)' + location.host);" title="Write me a mail">
+        <i id="mail" class="fas fa-envelope-square"></i>
+      </a>       
     </div>
   </div>
 </body>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-648146-1"></script>
 <script type="text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-648146-1');
+
   new Typed(".typed" ,{ // https://github.com/mattboldt/typed.js/
     strings: [
       "I'm a coder"
-      ,"I'm a engineering leader"
-      ,"I'm a father"
+      ,"I'm a proud father of two"
       ,"Ich bin ein Berliner"
+      ,"I build teams and products @work"
       ,"I practice Muay-Thai"
       ,"I'm " + new Date(Date.now()-62585735726663).getFullYear() + " years old"
-      ,"I'm investing into stocks"
+      ,"I like investing"
+      ,"I run this site since 2002"
     ]
     ,typeSpeed: 90
     ,backDelay: 700
-    ,loop: true 
+    ,loop: true
+    ,shuffle : true 
   });
-</script>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-648146-1']);
-  _gaq.push(['_setDomainName', 'mathiasnitzsche.de']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = 'https://www.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
 </script>
 </html>
