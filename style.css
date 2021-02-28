@@ -1,0 +1,129 @@
+body {
+  background-color: #F8F8F8;
+}
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; -moz-font-feature-settings: "liga" on; margin: 0; }
+.container {
+  font-family: Garamond, serif;
+  width: 640px;
+  max-width: 80%;
+  margin: 100px auto 40px auto;
+  
+}
+@media (max-width: 800px) {
+  .container {
+    margin: 40px auto 20px auto;
+    font-size: 13px;
+  }
+}
+a {
+  color: #999;
+  text-decoration: none;
+  border-bottom: 1px dotted #333;
+}
+a:hover {
+  color: #777;
+  border-bottom-color: #222;
+}
+
+.header {
+  height: 170px;
+  padding-left: 140px;
+  position: relative;
+}
+
+.foto {
+  background: url(me/2014-06.jpg);
+  background-size: 120px;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 0;
+  height: 150px;
+  width: 140px;
+}
+
+.name {
+  font-family: Garamond, serif;
+  line-height: 42px;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.intro {
+  margin-bottom: 40px; color: #666;
+  font-family: Courier New;
+  font-size: 2em;
+  height: 42px;
+}
+
+.projects {
+  font-family: "Helvetica Neue", Arial, Sans-Serif;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #999; 
+}
+
+.projects ul {
+  padding: 10px 0 0 0;
+  margin: 0 0 20px 5px;
+}
+.projects ul li {
+  list-style-type: none;
+  padding: 0 0 10px 0;
+}
+.projects ul li:before {
+  content: "\2192";
+  padding-right: 20px;
+}
+
+/*
+  https://fontawesome.com/
+  https://bootstrapthemes.co/collections/free-html-css3-social-media-buttons/
+*/
+.social {
+  font-size: 2em;
+  color: #555;
+  overflow: hidden;
+}
+.social a {
+  vertical-align: bottom;
+  color: #555;
+  text-decoration: none;
+  border-bottom: none;   
+}
+.social a i {
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: color 300ms ease, padding 300ms ease;
+  transform: translateZ(0);
+ }   
+.social a i:hover {
+  padding: 5px 5px 15px 5px;
+}
+.social a i:hover::before {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 10px -5px;
+  transition: box-shadow 0.3s ease;
+   z-index:10;
+}     
+.social a i#twitter:hover {color: #77DDF6;}
+.social a i#github:hover {color: black;}
+.social a i#linkedin:hover {color: #0177B5;}
+.social a i#mail:hover {color: #F7B401;}	
+
+.nav {
+  font-family: "Helvetica Neue", Arial, Sans-Serif;
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.galery img {
+  border: 1px solid #BBB;
+  box-shadow: rgba(50, 50, 50, 0.3) 5px 5px 10px -2px;
+  margin: 5px;
+}
+
