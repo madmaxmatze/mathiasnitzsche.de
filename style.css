@@ -25,11 +25,13 @@ a:hover {
   border-bottom-color: #222;
 }
 
+
 .header {
-  height: 170px;
+  height: 180px;
   padding-left: 140px;
   position: relative;
 }
+
 
 .foto {
   background: url(me/2014-06.jpg);
@@ -40,9 +42,10 @@ a:hover {
   left: 0;
   top: 0;
   border: 0;
-  height: 150px;
+  height: 180px;
   width: 140px;
 }
+
 
 .name {
   font-family: Garamond, serif;
@@ -52,12 +55,14 @@ a:hover {
   font-size: 1.2em;
 }
 
+
 .intro {
   margin-bottom: 40px; color: #666;
   font-family: Courier New;
   font-size: 2em;
   height: 42px;
 }
+
 
 .projects {
   font-family: "Helvetica Neue", Arial, Sans-Serif;
@@ -66,7 +71,6 @@ a:hover {
   line-height: 28px;
   color: #999; 
 }
-
 .projects ul {
   padding: 10px 0 0 0;
   margin: 0 0 20px 5px;
@@ -80,10 +84,7 @@ a:hover {
   padding-right: 20px;
 }
 
-/*
-  https://fontawesome.com/
-  https://bootstrapthemes.co/collections/free-html-css3-social-media-buttons/
-*/
+
 .social {
   font-size: 2em;
   color: #555;
@@ -114,6 +115,7 @@ a:hover {
 .social a i#linkedin:hover {color: #0177B5;}
 .social a i#mail:hover {color: #F7B401;}	
 
+
 .nav {
   font-family: "Helvetica Neue", Arial, Sans-Serif;
   color: #333;
@@ -121,9 +123,23 @@ a:hover {
   margin-bottom: 20px;
 }
 
-.galery img {
-  border: 1px solid #BBB;
+
+.galery figure {
+  float: left;
+  border: 1px solid #CCC;
   box-shadow: rgba(50, 50, 50, 0.3) 5px 5px 10px -2px;
   margin: 5px;
+  position: relative;
 }
-
+.galery figure img {
+  vertical-align:top;
+  height: 180px;
+}
+.galery figcaption {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 2px;
+  color: white;
+  background: black;
+}
