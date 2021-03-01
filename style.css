@@ -1,33 +1,40 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga" on;
+  margin: 0;
+}
 body {
   background-color: #F8F8F8;
 }
-* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; -moz-font-feature-settings: "liga" on; margin: 0; }
 .container {
   font-family: Garamond, serif;
   width: 640px;
   max-width: 80%;
-  margin: 100px auto 40px auto;
+  margin: 100px auto 100px auto;
   
 }
 @media (max-width: 800px) {
   .container {
-    margin: 40px auto 20px auto;
+    margin: 40px auto 40px auto;
     font-size: 13px;
   }
 }
+
 a {
   color: #999;
   text-decoration: none;
-  border-bottom: 1px dotted #333;
+  border-bottom: 1px dotted #444;
 }
 a:hover {
-  color: #777;
+  color: #666;
   border-bottom-color: #222;
 }
 
 
 .header {
-  height: 180px;
+  height: 200px;
   padding-left: 140px;
   position: relative;
 }
@@ -53,6 +60,7 @@ a:hover {
   position: absolute;
   top: 5px;
   right: 25px;
+  font-size: 0.9em;
 }
 
 .name {
@@ -116,7 +124,7 @@ a:hover {
 .social a i:hover::before {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 10px -5px;
   transition: box-shadow 0.3s ease;
-   z-index:10;
+  z-index:10;
 }     
 .social a i#twitter:hover {color: #77DDF6;}
 .social a i#github:hover {color: black;}
@@ -133,7 +141,7 @@ a:hover {
 
 
 .galery figure {
-  float: left;
+  display: inline-block;
   border: 1px solid #CCC;
   box-shadow: rgba(50, 50, 50, 0.3) 5px 5px 10px -2px;
   margin: 5px;
