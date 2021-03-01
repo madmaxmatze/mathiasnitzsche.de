@@ -8,19 +8,22 @@
 body {
   background-color: #F8F8F8;
 }
+
+
 .container {
   font-family: Garamond, serif;
   width: 640px;
-  max-width: 80%;
   margin: 100px auto 100px auto;
   
 }
 @media (max-width: 800px) {
   .container {
-    margin: 40px auto 40px auto;
+    width:  auto;
+    margin: 30px;
     font-size: 13px;
   }
 }
+
 
 a {
   color: #999;
@@ -44,31 +47,39 @@ a:hover {
   background: url(me/2014-06.jpg);
   background-size: 120px;
   background-repeat: no-repeat;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
   position: absolute;
   left: 0;
   top: 0;
   border: 0;
-  height: 180px;
-  width: 140px;
+  height: 160px;
+  width: 120px;
+  border: 1px solid #eee;
+}
+.foto:hover {
+  border-color: #ddd;
 }
 .foto::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f0c1";
-  color: #DDD;
+  color: #CCC;
   position: absolute;
   top: 5px;
-  right: 25px;
+  right: 5px;
   font-size: 0.9em;
 }
+.foto:hover::before {
+  color: #EEE; 
+}
+
 
 .name {
   font-family: Garamond, serif;
   line-height: 42px;
   margin-bottom: 10px;
   color: #333;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 
@@ -151,7 +162,7 @@ a:hover {
   vertical-align:top;
   height: 180px;
 }
-.galery figcaption {
+.galery figure figcaption {
   position: absolute;
   bottom: 0px;
   left: 0px;
