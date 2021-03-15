@@ -93,7 +93,9 @@ a:hover {
   font-size: 2em;
   height: 42px;
 }
-
+.typed-cursor {
+  position: absolute;
+}
 
 .projects {
   font-family: "Helvetica Neue", Arial, Sans-Serif;

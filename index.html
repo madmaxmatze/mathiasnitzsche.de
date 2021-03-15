@@ -45,7 +45,7 @@
   gtag('js', new Date());
   gtag('config', 'UA-648146-1');
 
-  new Typed(".typed" ,{ // https://github.com/mattboldt/typed.js/
+  new Typed(".typed", { // https://github.com/mattboldt/typed.js/
     strings: [
       "I'm a coder"
       ,"I'm a proud father of two"
@@ -55,11 +55,11 @@
       ,"I'm " + new Date(Date.now()-62585735726663).getFullYear() + " years old"
       ,"I like investing"
       ,"I run this site since 2002"
-    ]
+    ].sort(() => .5 - Math.random())
     ,typeSpeed: 90
     ,backDelay: 700
     ,loop: true
-    ,shuffle : true 
+    //,shuffle : true     // <- buggy
   });
 </script>
 </html>
