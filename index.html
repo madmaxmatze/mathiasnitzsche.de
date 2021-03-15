@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <title>Mathias Nitzsche</title>
-
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <head>
+    <title>Mathias Nitzsche</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <a class="foto" href="/me" title="More fotos?">More Fotos?</a>
+        <div class="name">Hi, I'm Mathias Nitzsche.</div>     
+        <div class='intro'><span class='typed'></span></div>  
+      </div>
+     
+      <div class="projects">
+        Current projects:
+        <ul>
+          <li><a href="https://www.peerfol.io" target="_blank">peerfol.io</a></li>
+          <li><a href="https://www.wifis.org" target="_blank">wifis.org</a></li>
+          <li>...more on <a href="https://github.com/madmaxmatze" target="_blank">Github</a></li>
+        </ul>
+      </div>
 
-<body>
-  <div class="container">
-    <div class="header">
-      <a class="foto" href="/me" title="More fotos?">More Fotos?</a>
-      <div class="name">Hi, I'm Mathias Nitzsche.</div>     
-      <div class='intro'><span class='typed'></span></div>  
+      <div class="social">
+        <a href="https://twitter.com/madmaxmatze" target="_blank" title="Twitter" class='twitter'>Twitter</a>
+        <a href="https://github.com/madmaxmatze" target="_blank" title="GitHub" class='github'>Github</a>
+        <a href="https://www.linkedin.com/in/mathiasnitzsche/" target="_blank" title="LinkedIn" class='linkedin'>LinkedIn</a>
+        <a href="javascript:alert('email me via info(at)' + location.host);" title="Write me a mail" class='mail'>Mail</a>
+      </div>
     </div>
-   
-    <div class="projects">
-      Current projects:
-      <ul>
-        <li><a href="https://www.peerfol.io" target="_blank">peerfol.io</a></li>
-        <li><a href="https://www.wifis.org" target="_blank">wifis.org</a></li>
-        <li>...more on <a href="https://github.com/madmaxmatze" target="_blank">Github</a></li>
-      </ul>
-    </div>
+  </body>
 
-    <div class="social">
-      <a href="https://twitter.com/madmaxmatze" target="_blank" title="Twitter" class='twitter'>Twitter</a>
-      <a href="https://github.com/madmaxmatze" target="_blank" title="GitHub" class='github'>Github</a>
-      <a href="https://www.linkedin.com/in/mathiasnitzsche/" target="_blank" title="LinkedIn" class='linkedin'>LinkedIn</a>
-      <a href="javascript:alert('email me via info(at)' + location.host);" title="Write me a mail" class='mail'>Mail</a>
-    </div>
-  </div>
-</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-648146-1"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-648146-1');
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-648146-1"></script>
-<script type="text/javascript">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-648146-1');
-
-  new Typed(".typed", { // https://github.com/mattboldt/typed.js/
-    strings: [
-      "I'm a coder"
-      ,"I'm a proud father of two"
-      ,"Ich bin ein Berliner"
-      ,"I build teams and products @work"
-      ,"I practice Muay-Thai"
-      ,"I'm " + new Date(Date.now()-62585735726663).getFullYear() + " years old"
-      ,"I like investing"
-      ,"I run this site since 2002"
-    ].sort(() => .5 - Math.random())
-    ,typeSpeed: 90
-    ,backDelay: 700
-    ,loop: true
-    //,shuffle : true     // <- buggy
-  });
-</script>
+    new Typed(".typed", { // https://github.com/mattboldt/typed.js/
+      strings: [
+        "I'm a coder"
+        ,"I'm a proud father of two"
+        ,"Ich bin ein Berliner"
+        ,"I build teams and products @work"
+        ,"I practice Muay-Thai"
+        ,"I'm " + new Date(Date.now()-62585735726663).getFullYear() + " years old"
+        ,"I like investing"
+        ,"I run this site since 2002"
+      ].sort(() => .5 - Math.random())
+      ,typeSpeed: 90
+      ,backDelay: 700
+      ,loop: true
+      //,shuffle : true     // <- buggy
+    });
+  </script>
 </html>
