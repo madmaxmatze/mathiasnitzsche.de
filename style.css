@@ -174,7 +174,11 @@ a:hover {
   font-family: "Helvetica Neue", Arial, Sans-Serif;
   color: #333;
   font-size: 2em;
-  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #F8F8F8;
+  padding: 20px 0px;
 }
 
 
