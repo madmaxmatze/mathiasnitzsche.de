@@ -185,11 +185,14 @@ a:hover {
 }
 
 
+.galery {
+  text-align: justify;
+}
 .galery figure {
   display: inline-block;
   border: 1px solid #CCC;
   box-shadow: rgba(50, 50, 50, 0.3) 5px 5px 10px -2px;
-  margin: 5px;
+  margin: 10px 5px;
   position: relative;
 }
 .galery figure img {
