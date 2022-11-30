@@ -41,43 +41,25 @@
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-648146-1"></script>
-  <script type="text/javascript">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-648146-1');
+  
+  <script>
+    /** Google Tag Manager */
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KNC3PQG');
+    /** End Google Tag Manager */
 
-    new Typed(".typed", { // https://github.com/mattboldt/typed.js/
-      strings: [
-        "I'm a coder"
-        ,"I'm a proud father of two"
-        ,"Ich bin ein Berliner"
-        ,"I build teams and products @work"
-        ,"I practice Muay-Thai"
-        ,"I'm " + new Date(Date.now()-62585735726663).getFullYear() + " years old"
-        ,"I like investing"
-        ,"I run this site since 2002"
-      ].sort(() => .5 - Math.random())
-      ,typeSpeed: 90
-      ,backDelay: 700
-      ,loop: true
-      //,shuffle : true     // <- buggy
-    });
-    
-    
     (async () => {
-      // https://api.rss2json.com/v1/api.json?order_by=pubDate&order_dir=desc&count=2&rss_url=https://madmaxmatze.medium.com/feed
-
       fetch("https://rss-to-json-serverless-api.vercel.app/api?feedURL=https://madmaxmatze.medium.com/feed&dailyCacheInvalidation=" + parseInt(Date.now()/60/60/24), {"cache": "force-cache"})
           .then(response => response.json())
           .then(data => {
             data.items.forEach(item => {
               var link = document.createElement("a");
-              link.setAttribute('href', item.guid);
+              link.setAttribute('href', item.url);
               link.setAttribute('target', '_blank');
               link.innerHTML = `${item.title} (${ (new Date (item.published)).toLocaleDateString(undefined, {month: 'short', day: 'numeric'})})`;
-              
               var listItem = document.createElement("li");
               listItem.appendChild(link);
               document.getElementById("writing").prepend(listItem);
@@ -85,5 +67,21 @@
           })
           .catch(error => null);
     })();
+
+    new Typed(".typed", { // https://github.com/mattboldt/typed.js/
+      strings: [
+        "I'm a coder"
+        ,"I'm a proud father of two"
+        ,"Ich bin ein Berliner"
+        ,"I build tech teams and products @work"
+        ,"I practice Muay-Thai"
+        ,"I'm " + new Date(Date.now()-62585735726663).getFullYear() + " years old"
+        ,"I run this site since 2002"
+      ].sort(() => .5 - Math.random())
+      ,typeSpeed: 90
+      ,backDelay: 700
+      ,loop: true
+      //,shuffle : true     // <- buggy
+    });
   </script>
 </html>
