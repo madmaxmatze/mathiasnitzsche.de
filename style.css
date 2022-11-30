@@ -10,10 +10,10 @@ body {
 }
 
 
-.container {
+body {
   font-family: Garamond, serif;
   width: 640px;
-  margin: 100px auto 100px auto;
+  margin: 40px auto 40px auto;
   
 }
 @media (max-width: 800px) {
@@ -36,8 +36,8 @@ a:hover {
 }
 
 
-.header {
-  height: 200px;
+header {
+  height: 160px;
   padding-left: 140px;
   position: relative;
 }
@@ -97,27 +97,35 @@ a:hover {
   position: absolute;
 }
 
-.projects {
-  font-family: "Helvetica Neue", Arial, Sans-Serif;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
+
+main {
+  font-family: "Helvetica Neue", Arial, Sans-Serif; 
+  line-height: 130%;
   color: #999; 
+  font-weight: 300;
 }
-.projects ul {
-  padding: 10px 0 0 0;
-  margin: 0 0 20px 5px;
+
+main h2 {
+  margin: 30px 0 15px 0;
+  font-weight: 300;
+  font-size: 26px;
 }
-.projects ul li {
+
+ul {
+  padding: 0;
+  margin: 0 0 0px 5px;
+}
+ul li {
+  font-size: 22px;
   list-style-type: none;
   padding: 0 0 10px 0;
 }
-.projects ul li:before {
+ul li:before {
   content: "\2192";
   padding-right: 20px;
   transition: all 0.2s ease;
 }
-.projects ul li:hover::before {
+ul li:hover::before {
   padding-left: 5px;
   padding-right: 15px;
 }
@@ -126,6 +134,7 @@ a:hover {
 .social {
   color: #555;
   overflow: hidden;
+  margin: 30px 0 0px 0;
 }
 .social a {
   display: inline-block;
