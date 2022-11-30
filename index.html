@@ -10,29 +10,34 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="header">
-        <a class="foto" href="/me" title="More fotos?">More Fotos?</a>
-        <div class="name">Hi, I'm Mathias Nitzsche.</div>     
-        <div class='intro'><span class='typed'></span></div>  
-      </div>
-     
-      <div class="projects">
-        Current projects:
-        <ul>
-          <li><a href="https://www.peerfol.io" target="_blank">peerfol.io</a></li>
-          <li><a href="https://www.wifis.org" target="_blank">wifis.org</a></li>
-          <li>...more on <a href="https://github.com/madmaxmatze" target="_blank">Github</a></li>
-        </ul>
-      </div>
+    <header>
+      <a class="foto" href="/me" title="More fotos?">More Fotos?</a>
+      <div class="name">Hi, I'm Mathias Nitzsche.</div>     
+      <div class='intro'><span class='typed'></span></div>  
+    </header>
 
+    <main> 
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="https://www.peerfol.io/" target="_blank">peerfol.io</a></li>
+        <li><a href="https://www.wifis.org/" target="_blank">wifis.org</a></li>
+        <li>...more on <a href="https://github.com/madmaxmatze" target="_blank">Github</a></li>
+      </ul>
+
+      <h2>Writing</h2>
+      <ul id="writing">
+        <li>...more on <a href="https://madmaxmatze.medium.com" target="_blank">Medium</a></li>
+      </ul>
+    </main> 
+
+    <footer> 
       <div class="social">
-        <a href="https://twitter.com/madmaxmatze" target="_blank" title="Twitter" class='twitter'>Twitter</a>
-        <a href="https://github.com/madmaxmatze" target="_blank" title="GitHub" class='github'>GitHub</a>
-        <a href="https://www.linkedin.com/in/mathiasnitzsche/" target="_blank" title="LinkedIn" class='linkedin'>LinkedIn</a>
-        <a href="javascript:alert('mail me via info(at)' + location.host);" title="Mail" class='mail'>Mail</a>
+        <a href="https://twitter.com/madmaxmatze" target="_blank" title="Twitter" class="twitter">Twitter</a>
+        <a href="https://github.com/madmaxmatze" target="_blank" title="GitHub" class="github">GitHub</a>
+        <a href="https://www.linkedin.com/in/mathiasnitzsche/" target="_blank" title="LinkedIn" class="linkedin">LinkedIn</a>
+        <a href="javascript:alert(&#39;mail me via info(at)&#39; + location.host);" title="Mail" class="mail">Mail</a>
       </div>
-    </div>
+    </footer> 
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
@@ -59,5 +64,26 @@
       ,loop: true
       //,shuffle : true     // <- buggy
     });
+    
+    
+    (async () => {
+      // https://api.rss2json.com/v1/api.json?order_by=pubDate&order_dir=desc&count=2&rss_url=https://madmaxmatze.medium.com/feed
+
+      fetch("https://rss-to-json-serverless-api.vercel.app/api?feedURL=https://madmaxmatze.medium.com/feed&dailyCacheInvalidation=" + parseInt(Date.now()/60/60/24), {"cache": "force-cache"})
+          .then(response => response.json())
+          .then(data => {
+            data.items.forEach(item => {
+              var link = document.createElement("a");
+              link.setAttribute('href', item.guid);
+              link.setAttribute('target', '_blank');
+              link.innerHTML = `${item.title} (${ (new Date (item.published)).toLocaleDateString(undefined, {month: 'short', day: 'numeric'})})`;
+              
+              var listItem = document.createElement("li");
+              listItem.appendChild(link);
+              document.getElementById("writing").prepend(listItem);
+            })
+          })
+          .catch(error => null);
+    })();
   </script>
 </html>
