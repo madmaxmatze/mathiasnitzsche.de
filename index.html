@@ -11,7 +11,7 @@
 
   <body>
     <header>
-      <a class="foto" href="/me" title="More fotos?">More Fotos?</a>
+      <a class="foto" href="me" title="More fotos?">More Fotos?</a>
       <div class="name">Hi, I'm Mathias Nitzsche.</div>     
       <div class='intro'><span class='typed'></span></div>  
     </header>
@@ -26,7 +26,7 @@
 
       <h2>Writing</h2>
       <ul id="writing">
-        <li>...more on <a href="https://madmaxmatze.medium.com" target="_blank">Medium</a></li>
+        <li>...more on <a href="https://blog.mathiasnitzsche.de" target="_blank">Hashnode</a></li>
       </ul>
     </main> 
 
@@ -39,49 +39,6 @@
       </div>
     </footer> 
   </body>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
-  
-  <script>
-    /** Google Tag Manager */
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KNC3PQG');
-    /** End Google Tag Manager */
-
-    (async () => {
-      fetch("https://rss-to-json-serverless-api.vercel.app/api?feedURL=https://madmaxmatze.medium.com/feed&dailyCacheInvalidation=" + parseInt(Date.now()/60/60/24), {"cache": "force-cache"})
-          .then(response => response.json())
-          .then(data => {
-            data.items.forEach(item => {
-              var link = document.createElement("a");
-              link.setAttribute('href', item.url);
-              link.setAttribute('target', '_blank');
-              link.innerHTML = `${item.title} (${ (new Date (item.published)).toLocaleDateString(undefined, {month: 'short', day: 'numeric'})})`;
-              var listItem = document.createElement("li");
-              listItem.appendChild(link);
-              document.getElementById("writing").prepend(listItem);
-            })
-          })
-          .catch(error => null);
-    })();
-
-    new Typed(".typed", { // https://github.com/mattboldt/typed.js/
-      strings: [
-        "I'm a coder"
-        ,"I'm a proud father of two"
-        ,"Ich bin ein Berliner"
-        ,"I build tech teams and products @work"
-        ,"I practice Muay-Thai"
-        ,"I'm " + new Date(Date.now()-62585735726663).getFullYear() + " years old"
-        ,"I run this site since 2002"
-      ].sort(() => .5 - Math.random())
-      ,typeSpeed: 90
-      ,backDelay: 700
-      ,loop: true
-      //,shuffle: true // <- buggy
-    });
-  </script>
+  <script src="scripts.js"></script>
 </html>
