@@ -77,7 +77,7 @@ header {
 }
 
 
-.name {
+p {
   font-family: Garamond, serif;
   line-height: 42px;
   margin-bottom: 10px;
@@ -87,7 +87,8 @@ header {
 
 
 .intro {
-  margin-bottom: 40px; color: #666;
+  margin: 10px 0 40px 0;
+  color: #666;
   font-family: Courier New;
   font-size: 2em;
   height: 42px;
@@ -183,7 +184,7 @@ ul li:hover::before {
 .social a.mail:hover {color: #F7B401;}
 
 
-.nav {
+nav {
   font-family: "Helvetica Neue", Arial, Sans-Serif;
   color: #333;
   font-size: 2em;
@@ -195,21 +196,21 @@ ul li:hover::before {
 }
 
 
-.galery {
+.gallery {
   text-align: justify;
 }
-.galery figure {
+.gallery figure {
   display: inline-block;
   border: 1px solid #CCC;
   box-shadow: rgba(50, 50, 50, 0.3) 5px 5px 10px -2px;
   margin: 10px 5px;
   position: relative;
 }
-.galery figure img {
+.gallery figure img {
   vertical-align:top;
   height: 180px;
 }
-.galery figure figcaption {
+.gallery figure figcaption {
   position: absolute;
   bottom: 0px;
   left: 0px;
