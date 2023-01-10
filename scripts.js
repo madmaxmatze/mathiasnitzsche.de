@@ -1,6 +1,14 @@
+/** Google Tag Manager */
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KNC3PQG');
+/** End Google Tag Manager */
+
+
 var writingElement = document.getElementById("writing");
 if (writingElement) {
-    console.log ("init hashnode");
     (async () => {
         var query = `{
             user(username: "madmaxmatze") {
@@ -8,11 +16,11 @@ if (writingElement) {
                 publicationDomain
                 publication {
                     posts(page: 0) {
-                    dateAdded
-                    slug
-                    title
-                    brief
-                    coverImage
+                        dateAdded
+                        slug
+                        title
+                        brief
+                        coverImage
                     }
                 }
             }
@@ -33,9 +41,9 @@ if (writingElement) {
     })();
 }
 
+
 var typedElement = document.getElementById("typed");
 if (typedElement) {
-    console.log ("init typed");
     new Typed(typedElement, { // https://github.com/mattboldt/typed.js/
         strings: [
             "I'm a coder"
