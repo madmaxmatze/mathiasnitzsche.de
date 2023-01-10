@@ -1,5 +1,6 @@
 var writingElement = document.getElementById("writing");
 if (writingElement) {
+    console.log ("init hashnode");
     (async () => {
         var query = `{
             user(username: "madmaxmatze") {
@@ -34,6 +35,7 @@ if (writingElement) {
 
 var typedElement = document.getElementById("typed");
 if (typedElement) {
+    console.log ("init typed");
     new Typed(typedElement, { // https://github.com/mattboldt/typed.js/
         strings: [
             "I'm a coder"
