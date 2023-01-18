@@ -7,21 +7,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KNC3PQG');
 
 
-/* Hashnode Posts *************************************************************
- * using proxy: https://github.com/madmaxmatze/code/tree/main/hashnode-api
- */
+/* Hashnode Posts ************************************************************/
 var writingElement = document.getElementById("writing");
 if (writingElement) {
-  fetch("https://mathiasnitzsche.de/api/v1/user/madmaxmatze/posts?1hourCache=" + ~~(Date.now()/1000/60/60), {cache: "force-cache"})
+  fetch("https://code.mathiasnitzsche.de/hasnode-api/v1/user/madmaxmatze/posts?1hourCache=" + ~~(Date.now()/1000/60/60), {cache: "force-cache"})
     .then(response => response.json())
-    .then(json => {
-      var articleHTML = json.data.user.publication.posts.slice(0, 2).map(post => `
-        <li><a href="https://${json.data.user.publicationDomain}/${post.slug}" target="_blank">
-          ${post.title} (${(new Date(post.dateAdded)).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })})
-        </a></li>
-      `).join("");
-      writingElement.insertAdjacentHTML("afterbegin", articleHTML);
-    });
+    .then(json => 
+      json.data.user.publication.posts.slice(0, 2).reduce((str, post) => str + `<li>
+          <a href="https://${json.data.user.publicationDomain}/${post.slug}" target="_blank">
+            ${post.title} (${(new Date(post.dateAdded)).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })})
+          </a>
+        </li>`, ""))
+    .then(postsHtml => writingElement.insertAdjacentHTML("afterbegin", postsHtml));
 }
 
 
