@@ -12,12 +12,11 @@ var writingElement = document.getElementById("writing");
 if (writingElement) {
   fetch("https://code.mathiasnitzsche.de/hasnode-api/v1/user/madmaxmatze/posts?1hourCache=" + ~~(Date.now()/1000/60/60), {cache: "force-cache"})
     .then(response => response.json())
-    .then(json => 
-      json.data.user.publication.posts.slice(0, 2).reduce((str, post) => str + `<li>
-          <a href="https://${json.data.user.publicationDomain}/${post.slug}" target="_blank">
-            ${post.title} (${(new Date(post.dateAdded)).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })})
-          </a>
-        </li>`, ""))
+    .then(posts => posts.slice(0, 2).reduce((str, post) => str + `<li>
+        <a href="https://${post.domain}/${post.slug}" target="_blank">
+          ${post.title} (${(new Date(post.dateAdded)).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })})
+        </a>
+      </li>`, ""))
     .then(postsHtml => writingElement.insertAdjacentHTML("afterbegin", postsHtml));
 }
 
