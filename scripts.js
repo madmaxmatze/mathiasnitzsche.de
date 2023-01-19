@@ -10,20 +10,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* Hashnode Posts ************************************************************/
 var writingElement = document.getElementById("writing");
 if (writingElement) {
-  fetch("https://code.mathiasnitzsche.de/hasnode-api/v1/user/madmaxmatze/posts?1hourCache=" + ~~(Date.now()/1000/60/60), {cache: "force-cache"})
+  fetch("https://code.mathiasnitzsche.de/hasnode-api/v1/user/madmaxmatze/posts?1hCache=" + ~~(Date.now()/1000/60/60), {cache: "force-cache"})
     .then(response => response.json())
-    .then(posts => posts.slice(0, 2).reduce((str, post) => str + `<li>
+    .then(posts => posts.slice(0, 2).forEach((post, i) =>
+      writingElement.children.item(i).outerHTML = `<li>
         <a href="https://${post.domain}/${post.slug}" target="_blank">
           ${post.title} (${(new Date(post.dateAdded)).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })})
         </a>
-      </li>`, ""))
-    .then(postsHtml => writingElement.insertAdjacentHTML("afterbegin", postsHtml));
+      </li>`));
 }
 
 
-/* TypWriter ******************************************************************
- * lib: https://github.com/mattboldt/typed.js/
- */
+/* TypeWriter *****************************************************************/
 var typedElement = document.getElementById("typed");
 if (typedElement) {
   new Typed(typedElement, {
