@@ -126,7 +126,7 @@ ul li {
   padding: 0 0 10px 0;
   line-height: 1.1em;
 }
-ul li:before {
+ul li::before {
   content: "\2192";
   padding-right: 20px;
   transition: all 0.2s ease;
@@ -135,6 +135,20 @@ ul li:hover::before {
   padding-left: 5px;
   padding-right: 15px;
 }
+
+
+@keyframes asciiLoader {
+  0%   {content: "●∙∙∙";}
+  33%  {content: "∙●∙∙";}
+  66%  {content: "∙∙●∙";}
+  100% {content: "∙∙∙●";}
+}
+ul li.loading::after {
+  content: "";
+  animation: asciiLoader 0.4s linear infinite alternate;
+}
+
+
 
 
 footer {

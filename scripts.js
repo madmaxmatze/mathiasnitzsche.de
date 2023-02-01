@@ -10,18 +10,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* Hashnode Posts ************************************************************/
 var writingElement = document.getElementById("writing");
 if (writingElement) {
-  writingElement.querySelectorAll("li:nth-child(-n+2)").forEach(e => {
-    e.n??=0;e.i=setInterval(()=>e.innerText="∙∙∙●∙∙∙".substr(++e.n%4,4),200); // loaderAnimation
-  });
-  
   fetch("https://code.mathiasnitzsche.de/hasnode-api/v1/user/madmaxmatze/posts?1hCache=" + ~~(Date.now()/1000/60/60), {cache: "force-cache"})
     .then(response => response.json())
     .then(posts => posts.slice(0, 2).forEach((post, i) =>
       writingElement.children.item(i).outerHTML = `<li>
         <a href="https://${post.domain}/${post.slug}" target="_blank">
-          ${post.title} (${(new Date(post.dateAdded)).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })})
+          ${post.title} (${(new Date(post.dateAdded)).toLocaleDateString(undefined, {month: 'short', day: 'numeric'})})
         </a>
-      </li>`));   
+      </li>`));
 }
 
 
