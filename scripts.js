@@ -26,13 +26,13 @@ var typedElement = document.getElementById("typed");
 if (typedElement) {
   new Typed(typedElement, {
     strings: [
-      "I'm a coder",
-      "I'm a proud father of two",
+      "Still coding stuff",
+      "A proud father of two",
       "Ich bin ein Berliner",
-      "I build tech teams and products @work",
-      "I practice Muay-Thai",
-      "I'm " + new Date(Date.now() - 62585735726663).getFullYear() + " years old",
-      "I run this site since 2002",
+      "Working as a freelance consultant (tech management)",
+      "Practicing Muay-Thai",
+      "" + new Date(Date.now() - 62585735726663).getFullYear() + " years old",
+      "Running this website since 2002",
     ].sort(() => .5 - Math.random()),   // shuffle: true, <- buggy
     typeSpeed: 90,
     backDelay: 700,
